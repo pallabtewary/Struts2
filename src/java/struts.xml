@@ -1,0 +1,40 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    
+    <package name="default" extends="struts-default"> 
+        <action name="registerusers" class="struts2.test.actions.UserAction" method ="registerUser">
+            <result name="REGISTER" >/register.jsp</result>
+        </action>
+        <action name="showusers" class="struts2.test.actions.UserAction" method = "showUsers">
+            <result name="REPORT">/report.jsp</result>
+        </action>
+        <action name="fetchuserdetails" class="struts2.test.actions.UserAction" method = "updateUser">
+            <result name="UPDATE">/update.jsp</result>
+        </action>
+        <action name="updateuserdetails" class="struts2.test.actions.UserAction" method = "updateUser">
+            <result name="UPDATE" type = "chain">showusers</result>
+        </action>
+        <action name="deleteuser" class="struts2.test.actions.UserAction" method = "deleteUser">
+            <result name="DELETE">/delete.jsp</result>
+        </action>
+        <action name="addproduct" class="struts2.test.actions.ProductAction" method = "createProduct">
+            <result name="REGISTERPRODUCT">/addProduct.jsp</result>
+        </action>
+        <action name="showproducts" class="struts2.test.actions.ProductAction" method = "showProducts">
+            <result name="REPORT">/reportProduct.jsp</result>
+        </action>
+        <action name="fetchproductdetails" class="struts2.test.actions.ProductAction" method = "updateProduct">
+            <result name="UPDATE">/updateProduct.jsp</result>
+        </action>
+        <action name="updateproductdetails" class="struts2.test.actions.ProductAction" method = "updateProduct">
+            <result name="UPDATE" type = "chain">showproducts</result>
+        </action>
+        <action name="deleteproductrecord" class="struts2.test.actions.ProductAction" method = "deleteProduct">
+            <result name="DELETE" type="chain">showproducts</result>
+        </action>
+    </package>
+</struts>

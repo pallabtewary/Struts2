@@ -1,0 +1,7 @@
+2022-01-22 23:18:56 DEBUG Main:21 - This is debug method
+# configuration to print on console2022-01-22 23:18:56 INFO  Main:22 - This is info method
+# configuration to print on console2022-01-22 23:18:56 ERROR Main:23 - This is error method
+# configuration to print on console2022-01-22 23:18:56 DEBUG Main:25 - This is debug from Level.DEBUG
+# configuration to print on console2022-01-22 23:18:56 INFO  Main:26 - This is info from Level.INFO
+# configuration to print on console2022-01-22 23:18:56 ERROR Main:27 - This is error from Level.ERROR
+# configuration to print on console
